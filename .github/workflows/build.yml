@@ -89,12 +89,12 @@ jobs:
         with:
           submodules: recursive
       - name: Download Sysroot (arm64)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Sysroot-macos-arm64
           path: Sysroot-1
       - name: Download Sysroot (x86_64)
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: Sysroot-macos-x86_64
           path: Sysroot-2
@@ -133,7 +133,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: UTM-ios-arm64
       - name: Install ldid
@@ -175,7 +175,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: UTM-ios-tci-arm64
       - name: Install ldid
@@ -217,7 +217,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: UTM-ios-arm64
       - name: Install ldid + dpkg
@@ -277,7 +277,7 @@ jobs:
           LAUNCHER_PROFILE_DATA: ${{ secrets.LAUNCHER_PROFILE_DATA }}
           LAUNCHER_PROFILE_UUID: ${{ secrets.LAUNCHER_PROFILE_UUID }}
       - name: Download Artifact
-        uses: actions/download-artifact@v2
+        uses: actions/download-artifact@v4.1.7
         with:
           name: UTM-macos-universal
       - name: Package for Release
